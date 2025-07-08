@@ -3,85 +3,117 @@
 
 <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Contact | Adedayo Oluseye Peters</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="img/my-fav.png" type="image/x-icon">
+    <style>
+        .card-custom {
+            border-left: 4px solid #ffd700;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card-custom:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .fade-in-section {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 1s ease-out, transform 1s ease-out;
+        }
+
+        .fade-in-section.is-visible {
+            opacity: 1;
+            transform: none;
+        }
+    </style>
 </head>
 
 <body>
 
-    <!-- ===== Header / Navbar ===== -->
-    <header>
-        <nav class="container">
-            <h1>Adedayo Peters</h1>
-            <div class="menu-toggle" id="mobile-menu">
-                <span></span>
-                <span></span>
-                <span></span>
+    <!-- ===== Navbar ===== -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0c1f3f;">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="index.html">Adedayo Peters</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+                aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNavbar">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="experience.html">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="contact.html">Contact</a></li>
+                </ul>
             </div>
-            <div class="nav-links">
-                <a href="index.html">Home</a>
-                <a href="about.html">About Me</a>
-                <a href="services.html">Services</a>
-                <a href="experience.html">Experience</a>
-                <a href="education.html">Education</a>
-                <a href="achievements.html">Achievements</a>
-                <a href="contact.html" class="active">Contact</a>
-            </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
     <!-- ===== Contact Section ===== -->
-    <section class="container" style="padding: 4rem 0;">
-        <h2 style="color: #0c1f3f; margin-bottom: 2rem;">Get in Touch</h2>
+    <section class="container py-5 fade-in-section" style="margin-top: 20px;">
+        <h2 class="text-center" style="color: #0c1f3f; margin-bottom: 2rem;">Get in Touch</h2>
 
-        <div style="display: flex; flex-direction: column; gap: 2rem; max-width: 700px; margin: auto;">
+        <div class="row g-4 justify-content-center">
 
             <!-- Contact Info -->
-            <div
-                style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 1px 5px rgba(0,0,0,0.05);">
-                <p><strong>Email:</strong> <a href="mailto:adedayo.peters@yahoo.com">adedayo.peters@yahoo.com</a></p>
-                <p><strong>Phone:</strong> <a href="tel:+2348139474634">0813 947 4634</a></p>
-                <p><strong>Address:</strong> No 8, Soyemi Street, off Ebute Road, Ibafo, Ogun State</p>
+            <div class="col-md-5">
+                <div class="card card-custom p-4 h-100">
+                    <h5><i class="bi bi-envelope-fill me-2"></i>Email</h5>
+                    <p><a href="mailto:adedayo.peters@yahoo.com">adedayo.peters@yahoo.com</a></p>
+
+                    <h5><i class="bi bi-telephone-fill me-2"></i>Phone</h5>
+                    <p><a href="tel:+2348139474634">0813 947 4634</a></p>
+
+                    <h5><i class="bi bi-geo-alt-fill me-2"></i>Address</h5>
+                    <p>No 8, Soyemi Street, off Ebute Road, Ibafo, Ogun State</p>
+                </div>
             </div>
 
-            <!-- Contact Form (non-functional placeholder) -->
-            <form
-                style="background: white; padding: 2rem; box-shadow: 0 1px 6px rgba(0,0,0,0.05); border-left: 4px solid #ffd700;">
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="name" style="display: block; font-weight: bold; color: #0c1f3f;">Your Name</label>
-                    <input type="text" id="name" name="name" placeholder="Enter your full name"
-                        style="width: 100%; padding: 0.75rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
+            <!-- Contact Form -->
+            <div class="col-md-7">
+                <div class="card card-custom p-4 h-100">
+                    <form>
+                        <div class="mb-3">
+                            <label for="name" class="form-label fw-bold" style="color: #0c1f3f;">Your Name</label>
+                            <input type="text" class="form-control" id="name" placeholder="Enter your full name">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold" style="color: #0c1f3f;">Your Email</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email address">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="message" class="form-label fw-bold" style="color: #0c1f3f;">Your Message</label>
+                            <textarea class="form-control" id="message" rows="5"
+                                placeholder="Type your message here..."></textarea>
+                        </div>
+
+                        <button type="submit" class="btn"
+                            style="background-color: #ffd700; color: #0c1f3f; font-weight: bold;">Send Message</button>
+                    </form>
+                    <p class="text-center mt-2" style="font-size: 0.9rem; color: #666;">* This form is for display only.
+                        To make it functional, connect with services like Formspree, Jotform, or Netlify Forms.</p>
                 </div>
+            </div>
 
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="email" style="display: block; font-weight: bold; color: #0c1f3f;">Your Email</label>
-                    <input type="email" id="email" name="email" placeholder="Enter your email address"
-                        style="width: 100%; padding: 0.75rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;">
-                </div>
-
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="message" style="display: block; font-weight: bold; color: #0c1f3f;">Your Message</label>
-                    <textarea id="message" name="message" rows="5" placeholder="Type your message here..."
-                        style="width: 100%; padding: 0.75rem; margin-top: 0.5rem; border: 1px solid #ccc; border-radius: 4px;"></textarea>
-                </div>
-
-                <button type="submit"
-                    style="padding: 0.75rem 2rem; background-color: #ffd700; color: #0c1f3f; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">Send
-                    Message</button>
-            </form>
-
-            <!-- Optional: Note -->
-            <p style="text-align: center; font-size: 0.9rem; color: #666;">* This form is for display only. To make it
-                functional, connect with services like Formspree, Jotform, or Netlify Forms.</p>
         </div>
     </section>
 
     <!-- ===== Footer ===== -->
-    <footer>
-        <p>© 2025 Adedayo Oluseye Peters. All rights reserved.</p>
+    <footer class="text-center py-4" style="background-color: #0c1f3f; color: white;">
+        <p class="mb-0">© 2025 Adedayo Oluseye Peters. All rights reserved.</p>
     </footer>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="script.js"></script>
 </body>
 

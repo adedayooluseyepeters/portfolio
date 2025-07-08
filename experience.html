@@ -1,90 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Experience | Adedayo Oluseye Peters</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
   <link rel="stylesheet" href="style.css" />
+  <link rel="shortcut icon" href="img/my-fav.png" type="image/x-icon">
+  <style>
+    .card-custom {
+      border-left: 4px solid #ffd700;
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .card-custom:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    }
+
+    .fade-in-section {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 1s ease-out, transform 1s ease-out;
+    }
+
+    .fade-in-section.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+  </style>
 </head>
+
 <body>
 
-  <!-- ===== Header / Navbar ===== -->
-  <header>
-    <nav class="container">
-      <h1>Adedayo Peters</h1>
-      <div class="menu-toggle" id="mobile-menu">
-        <span></span>
-        <span></span>
-        <span></span>
+  <!-- ===== Navbar ===== -->
+  <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: #0c1f3f;">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Adedayo Peters</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar"
+        aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNavbar">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About Me</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link active" href="experience.html">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="education.html">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="achievements.html">Achievements</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+        </ul>
       </div>
-      <div class="nav-links">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Me</a>
-        <a href="services.html">Services</a>
-        <a href="experience.html" class="active">Experience</a>
-        <a href="education.html">Education</a>
-        <a href="achievements.html">Achievements</a>
-        <a href="contact.html">Contact</a>
-      </div>
-    </nav>
-  </header>
+    </div>
+  </nav>
 
   <!-- ===== Experience Section ===== -->
-  <section class="container" style="padding: 4rem 0;">
-    <h2 style="color: #0c1f3f; margin-bottom: 2rem;">Professional Experience</h2>
+  <section class="container py-5 fade-in-section" style="margin-top: 20px;">
+    <h2 class="text-center" style="color: #0c1f3f; margin-bottom: 2rem;">Professional Experience</h2>
 
-    <div style="display: flex; flex-direction: column; gap: 2rem;">
+    <div class="row g-4">
 
       <!-- Role 1 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Managing Partner — ADEDAYO ADESANYA-PETERS CHAMBERS</h3>
-        <p><em>Ibafo, Ogun State — Dec 2021 – Present</em></p>
-        <p>Providing leadership in complex legal matters including corporate advisory, real estate, family law, and litigation.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-briefcase-fill fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Managing Partner</h5>
+          </div>
+          <p><em>ADEDAYO ADESANYA-PETERS CHAMBERS — Dec 2021 – Present</em></p>
+          <p>Leadership in complex legal matters including corporate advisory, real estate, family law, and litigation.
+          </p>
+        </div>
       </div>
 
       <!-- Role 2 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Legal / HR / Operations Manager — Adron Homes & Properties Ltd.</h3>
-        <p><em>Sagamu, Ogun State — July 2018 – Dec 2021</em></p>
-        <p>Oversaw legal affairs, HR, and operational strategy. Successfully recruited and trained over 100 staff. Led due diligence and asset management operations.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-building-fill fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Legal / HR / Operations Manager</h5>
+          </div>
+          <p><em>Adron Homes & Properties Ltd. — July 2018 – Dec 2021</em></p>
+          <p>Oversaw legal affairs, HR, and operations. Recruited and trained 100+ staff, led due diligence and asset
+            management.</p>
+        </div>
       </div>
 
       <!-- Role 3 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Associate Counsel — Rosefields Solicitors</h3>
-        <p><em>Ojodu Berger, Lagos — April 2014 – April 2018</em></p>
-        <p>Specialized in corporate law, real estate transactions, debt recovery, and legal compliance for corporate clients.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-journal-text fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Associate Counsel</h5>
+          </div>
+          <p><em>Rosefields Solicitors — April 2014 – April 2018</em></p>
+          <p>Specialized in corporate law, real estate transactions, debt recovery, and compliance for corporate
+            clients.</p>
+        </div>
       </div>
 
       <!-- Role 4 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Litigation Lawyer — Malcolm Omirhobo & Co</h3>
-        <p><em>Isolo, Lagos — Nov 2012 – March 2014</em></p>
-        <p>Focused on commercial and civil litigation, arbitration, and case strategy development for individual and corporate clients.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-gavel fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Litigation Lawyer</h5>
+          </div>
+          <p><em>Malcolm Omirhobo & Co — Nov 2012 – March 2014</em></p>
+          <p>Focused on commercial and civil litigation, arbitration, and strategy for individual and corporate clients.
+          </p>
+        </div>
       </div>
 
       <!-- Role 5 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Lecturer — Widerange Professionals (ICAN Accredited Center)</h3>
-        <p><em>Arepo, Ogun State — 2017 – 2019</em></p>
-        <p>Taught Business Law to accounting students, developed teaching strategies and created engaging legal modules.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-mortarboard-fill fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Lecturer</h5>
+          </div>
+          <p><em>Widerange Professionals (ICAN Center) — 2017 – 2019</em></p>
+          <p>Taught Business Law to accounting students, developed modules and legal learning strategies.</p>
+        </div>
       </div>
 
       <!-- Role 6 -->
-      <div style="background: white; padding: 1.5rem 2rem; border-left: 4px solid #ffd700; box-shadow: 0 2px 6px rgba(0,0,0,0.05);">
-        <h3 style="color: #0c1f3f;">Junior Counsel — Bala & Co Chambers</h3>
-        <p><em>Kogi State — 2012</em></p>
-        <p>Provided legal assistance on civil and children’s law matters, including court appearances and research.</p>
+      <div class="col-md-6">
+        <div class="card card-custom p-3 h-100">
+          <div class="d-flex align-items-center mb-2">
+            <i class="bi bi-person-fill fs-3 me-2 text-warning"></i>
+            <h5 class="mb-0" style="color: #0c1f3f;">Junior Counsel</h5>
+          </div>
+          <p><em>Bala & Co Chambers — 2012</em></p>
+          <p>Assisted on civil and children’s law matters, including research and court appearances.</p>
+        </div>
       </div>
 
     </div>
   </section>
 
   <!-- ===== Footer ===== -->
-  <footer>
-    <p>© 2025 Adedayo Oluseye Peters. All rights reserved.</p>
+  <footer class="text-center py-4" style="background-color: #0c1f3f; color: white;">
+    <p class="mb-0">© 2025 Adedayo Oluseye Peters. All rights reserved.</p>
   </footer>
 
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <script src="script.js"></script>
 </body>
+
 </html>
